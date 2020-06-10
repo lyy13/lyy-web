@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#im {
+		position: absolute;
+	}
+</style>
+</head>
+<body>
+	<img src="3.png" id="im">
+
+	<script type="text/javascript">
+		var im = document.getElementById('im');
+		document.onmouseover = function(e){
+            e=e||window.event;
+            im.style.left = e.pageX -10 + 'px';
+            im.style.top = e.pageY -10 + 'px';
+		}
+	</script>
+</body>
+</html>

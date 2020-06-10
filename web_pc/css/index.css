@@ -1,0 +1,174 @@
+/*全局属性*/
+ ul,ol,h1,h2,h3,h4,h5,h6 {
+ 	border: 0;
+ 	margin: 0;
+ }
+ img{
+    vertical-align: middle;    /*清除图片的白色区域*/
+}
+body {
+	font-size: 12px;
+	margin: 0;
+}
+.clear {
+	clear: both;
+}
+ .left {
+ 	float: left;
+ }
+ .right {
+ 	float: right;
+ }
+ .share_content {
+    margin :0 auto;
+    width: 1200px;
+ }
+ a {
+ 	text-decoration: none;
+ 	color: #7f7f7f;
+ }
+ a:hover{
+    color: #ff6600;
+}
+
+/*头部样式*/
+#top {
+	height: 73px;
+	border-bottom: 1px solid #666;
+}
+.top_share {
+	margin: 0 auto;
+    width:1200px;
+}
+ .logo {
+ 	float: left;
+ }
+ .yuyan {
+ 	float: right;
+ 	/*padding-right: 200px; */
+ }
+ ul {
+ 	list-style: none;
+ }
+.li {
+ 	display: inline-block;
+ 	padding-right: 8px;
+ 	height: 73px;
+ 	line-height: 73px;
+ }
+ .yuyan ul li img {
+ 	/*display: block;*/
+    /*float: left;*/
+ 	margin: 4px  5px;
+ }
+
+
+/*导航样式*/
+.nav {
+	height: 35px;
+	border-bottom: 2px solid #ff6600;
+}
+.nav li {
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	width: 100px;
+	text-align: center;
+	font-size:14px;
+    font-weight:bold;
+}
+.active {
+	background: url("../image/jt_icon.png") no-repeat bottom;
+}
+.bg img {
+	width: 100%;
+}
+.banner {
+	background-color: #f4f4f4;
+    border-bottom:1px solid #b4b4b4;
+    padding:6px 0;
+}
+.banner ul {
+	padding :0;
+}
+.banner li {
+	display: inline-block;
+    margin-left:8.5px;
+    border:2px solid #eaeaea;
+}
+.banner li:hover {
+	border:2px solid #ff6600;
+}
+.banner span {
+	cursor: pointer;
+}
+
+/*中部*/
+.top-banner {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.new-list {
+	width: 580px;
+}
+.new-title {
+	border-top: 1px solid #b4b4b4;
+}
+.new-title span {
+	width: 150px;
+	border-top: 1px solid #f60;
+	display: block;
+	position: relative;
+	top: -1px;
+	padding: 10px 0;
+}
+.new-title a {
+	background: #b4b4b4;
+	float: right;
+	padding: 2px 10px;
+	color: #fff;
+	border-radius: 5px;
+	margin-top: 8px;
+}
+.new-list-content {
+	border-bottom: 1px dashed #b4b4b4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.new-list-r {
+	width: 330px;
+}
+.new-list-01 li {
+	background: url("../image/点.png") no-repeat left;
+	padding-left: 10px;
+	line-height: 30px;
+}
+.link {
+	border: 1px solid #b4b4b4;
+	padding: 8px;
+	position: relative;
+}
+.link a {
+	margin: 0 5px;
+}
+.more {
+	background-color: #c9c9c9;
+	color: #fff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	text-align: center;
+	line-height: 20px;
+	right: 10px;
+	top: 5px;
+}
+
+.foot {
+	background: #b4b4b4;
+	color: #fff;
+	text-align: center;
+    margin-top: 20px;
+    line-height: 35px;
+    /*height: 50px;*/
+}    

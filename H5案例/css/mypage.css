@@ -1,0 +1,250 @@
+/*背景样式*/
+#fp-nav ul li a span {
+	background: #333;
+}
+/*第一屏*/
+.s1 {
+	background: #fadd67 url(../image/t1fpyqfltdxxaiulhh-990-600.png) no-repeat center bottom;
+}
+.fly {
+	position: absolute;
+	right: 20%;
+	top: 10%;
+}
+.tu1 {
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	bottom: 335px;
+}
+.tu2 {
+	position: absolute;
+	left: 50%;
+	margin-left: -400px;
+    bottom: 150px;
+
+}
+
+
+
+/*第2屏*/
+.s2 {
+	z-index: 2;
+	background: #84a2d4 url(../image/t1zdgpfi8exxca6rfn-2000-600.png) no-repeat center bottom;
+}
+.com {
+	width: 990px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	/*margin-left: -495px;*/
+	transform: translateX(-50%);
+
+	/*background: rgba(0,0,0,0.3);*/
+
+	bottom: 0;
+}
+.search {
+	width: 222px;
+	height: 45px;
+	background: url(../image/search.png) no-repeat;
+	right: -30px;
+	bottom: 300px;
+	position: absolute;
+}
+.sc {
+	position: absolute;
+	right: 30px;
+	top: 2px;
+	opacity: 0;  /*因为是做谈入的效果，所以用透明度不用display*/
+}
+.st {
+	position: absolute;
+	bottom: 300px;
+	right: 370px;
+	display: none;
+}
+.shafaslit {
+	height: 100px;
+	position: absolute;
+	bottom: 217px;
+	right: 270px;
+	display: none;
+}
+.word1,.word2 {
+	position: absolute;
+	left: 50%;
+	bottom: 550px;
+	transform: translateX(-50%);
+}
+.word2 {
+	opacity: 0;
+}
+.seach-2 {
+	position: absolute;
+	bottom: 345px;
+	left: 395px;
+    width: 100px;
+    display: none;
+    z-index: 6;
+}
+.cover {
+	position: absolute;
+	bottom: 334px;
+	right: 492px;
+	width: 105px;
+	height: 90px;
+	z-index: 5;
+	background-color: #fff;
+	display: none;
+}
+
+
+
+/*第3屏*/
+.s3 {
+	background: #ef674d;
+	z-index: 1;
+}
+.main {
+	position: absolute;
+	width: 700px;
+	height: 500px;
+	background : url(../image/main.png) no-repeat center;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 50px;
+}
+.select {
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	bottom: 0;
+	right: 8px;
+}
+.btn {
+	position: absolute;
+	bottom: 10px;
+}
+.seach1,.st3 {
+	position: absolute;
+	left: 115px;
+	bottom: 200px;
+	display: none;
+}
+.st3 {
+	z-index: 6;
+}
+.img {
+	position: absolute;
+}
+.img-a,.btn-a {
+	opacity: 0;
+}
+
+
+
+
+
+/*第4屏*/
+.s4 {
+	background: #fed url(../image/t1iresfnxaxxca6rfn-2000-600.png) no-repeat center bottom;
+}
+.cloud {
+	position: absolute;
+	left: 50%;
+	bottom: 550px;
+}
+.word4 {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 500px;
+}
+.word4-a {
+	opacity: 0;
+}
+.car {
+	width: 500px;
+	bottom: 50px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.car-img {
+	position: absolute;
+	bottom:200px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+	display: none;
+}
+.cc {
+	z-index: 8;
+}
+
+
+
+
+
+
+/*第5屏*/
+.s5 {
+	background: #d04759 url(../image/t1yisqfa4exxa3gmkg-2000-1500.png);
+}
+/*第6屏*/
+.s6 {
+	background: #84d9ed url(../image/t1dvj.fn0gxxb0_fua-2500-600.png) no-repeat 20% 100%;
+}
+/*第7屏*/
+.s7 {
+	background: #8ac060 url(../image/t1wf1tfctaxxa3gmkg-2000-1500.png) no-repeat 50% 100%;
+}
+/*第8屏*/
+.s8 {
+	background: url(../image/ksgw.png);
+}
+.gou {
+	position: fixed;
+	/*固定定位*/
+	top: 5%;
+	right: 5%;
+}
+
+/*动画*/
+.updown {
+    animation: fly 3s linear infinite;   /*linear匀速 infinite无限循环*/
+}
+.shirt-updown {
+	animation: shirt 3s linear infinite; 
+}
+@keyframes fly {
+	0% {
+		top: 10%;
+	}
+	50% {
+		top: 20%;
+	}
+	100% {
+		top: 10%;
+	}
+}
+@keyframes shirt {
+	50% {
+		bottom: 360px;
+	}
+	100% {
+		bottom: 335px;
+	}
+}
+.cloud1 {
+    animation: cloud 50s linear infinite;
+}
+@keyframes cloud {
+	50% {
+		left: -10%;
+	}
+	100% {
+		left: 50%
+	}
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt" name="">
+	<script type="text/javascript">
+		// 键盘事件
+		// keydown 键盘按下的时候
+		// keyup 键盘弹起的时候
+		// keydown 和 keyup 的区别：keydown的时候我们按下的建的值还没有输入到文本框
+		// keyup键盘弹起时按的建已经落入文本框中
+		var txt = document.getElementById('txt');
+		txt.onkeydown = function (e) {
+			// 判断当前用户按下的键是否为数字
+			e = e || window.event;
+			// e.keyCode 键盘码即ASC码
+			// 如果keyCode数值在96-105间，则是数字
+			// 按下删除键则删除一个字符，删除键对应8
+			console.log(e.keyCode);
+			if ((e.keyCode<96||e.keyCode>105) && e.keyCode!==8) {
+				return false;
+			}
+			
+		}
+	</script>
+</body>
+</html>

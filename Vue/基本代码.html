@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	[v-cloak] {
+		display: none;
+		/*能够解决插值表达式查询闪烁问题*/
+	}
+</style>
+	<!-- 引入Vue的js包 -->
+	<script></script>
+</head>
+<body>
+	<div id="a">
+		<!-- 这样就可以调用数据了 -->
+		<!-- 还可以插入内容 -->
+		<p v-cloak>我爱{{ msg }}吧</p>
+		<!-- 也可以用v-text渲染内容 -->
+		<h4 v-text="msg"></h4>
+		<!-- 默认v-text没有闪烁问题；但是！！！他会覆盖掉元素原本的内容 -->
+		<!-- 但是以上两种都不可以解析代码，就是说msg数据有标签就会直接显示标签，不会翻译为HTML代码 -->
+		<h4 v-html="msg"></h4>
+		<!-- 这样可以解析代码 -->
+
+
+		<!-- Vue中提供了v-on：事件绑定机制可以用@代替 -->
+		<input type="button" value="按钮" v-bind:title="mytitle" v-on:click="show">
+		<!-- v-bind：是Vue中提供的绑定属性的指令！！只写：没有 v-bind也可以-->
+	</div>
+	<script>
+		//创建Vue实例
+		var vm = new Vue({
+			el: '#a' , //表示这个实例要控制页面的哪个区域
+			data: {
+				//data属性存放的是el中要用到的数据
+				//通过Vue指令可以很方便将数据渲染到页面上
+				msg:'基本代码',
+				mytitle:'这是一个自己定义的title'
+			},
+			methods:{//这个methods属性中定义了当前Vue实例所有可使用的方法
+				show:function(){
+					alert('hi')
+				}
+
+			}
+		})
+	</script>
+</body>
+</html>

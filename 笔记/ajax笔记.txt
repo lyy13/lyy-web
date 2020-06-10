@@ -1,0 +1,84 @@
+PHP：
+<?php
+	// 所以PHP相关代码都写在这里面
+	// echo 的作用向页面当中输入字符串
+?>
+
+
+变量声明：$变量名
+
+字符串拼接不是用+而是用.
+
+单引号把里面的内容当作普通的字符串处理
+双引号会将里面的变量解释为变量的值
+
+
+echo：输出简单的数据类型，如字符串、数值
+print_r（）：输出复杂数据类型，如数组
+var_dump():输出详细信息，如对象、数组
+
+函数返回值以及变量记得上$
+函数名字不分大小写
+
+json_encode()标准字符串形式
+
+
+$_GET   用来从服务器获取数据
+$_POST  用来添加数据
+
+form默认请求方式就是get请求，get请求会把表单数据作为URL的参数；需要加个method='post'
+
+
+iframe相当于子页面
+
+
+// 1.创建XMLHttpRequest对象
+var xhr = new XMLHttpRequest();
+// 2.准备发送
+// 参数一：请求方式（get获取数据，post提交数据）
+// 参数二：请求地址
+// 参数三：同步或者异步的标志，true是异步，false是同步
+// 如果是get请求那么参数必须在URL中传递
+xhr.open('get','./check.php?username='+username+'&password='+password,true);
+// 3.执行发送动作
+// get请求直接null
+xhr.send(null);
+// 4.指定回调函数
+xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4){
+	if(xhr.status == 200){
+	   var data = xhr.responseText;
+
+
+encodeURI（）用来对中文参数进行编码，防止乱码
+
+
+post请求要send（param）
+
+readyState == 0表示对象创建完成
+readyState == 1表示已经发送了请求
+readyState == 2表示浏览器已经收到服务器响应的数据
+readyState == 3表示正在解析
+readyState == 4表示数据解析完成可以使用
+
+
+status == 200表示数据是正常的
+
+
+json数据与普通js对象的区别：
+1.json数据没有变量
+2.json形式的数据结尾没有分号
+3.json数据中的键必须用双引号包住
+{……}
+
+
+JSON.parse（）把json形式的字符串转成对象
+JSON.stringify（）转为字符串
+json_encode（）将数组转为json格式
+
+
+
+
+
+
+

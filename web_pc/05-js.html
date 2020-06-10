@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	请输入数字：<input type="text" id="text1">
+	<input type="button" value="检测分数" onclick="check()" >
+	<br><br>
+</body>
+
+<script type="text/javascript">
+
+		// <!-- 分数判断 -->		
+		function check() {
+			var text1 = document.getElementById('text1');
+			if (text1.value >= 90) {
+				alert('A');
+			}else if(text1.value >= 80) {
+                alert('B');
+			}else if(text1.value >= 70) {
+                alert('C');
+			}else if(text1.value >= 60) {
+                alert('D');
+			}else if(text1.value < 60){
+				alert('不及格');
+			}else {
+				alert('请输入正确的分数')
+			}
+		}
+
+        // 星期行程
+	    var date = new Date();
+		var week = date.getDay();//获取星期几0-6；0是星期天
+		var x;
+		console.log(date);
+		console.log(week);
+		switch(week){
+			case 0:
+			x="今天是星期天，明天就要上课了，快点睡觉。";
+			break;
+			case 1:
+			x="今天是星期一，又开始了新的一周。";
+			break;
+			case 2:
+			x="今天是星期二，继续学习。";
+			break;
+			case 3:
+			x="今天是星期三，这周已经过去一半了，快放假了。";
+			break;
+			case 4:
+			x="今天是星期四，明天就是星期五哟。";
+			break;
+			case 5:
+			x="今天是星期五，最后一天了，终于要放假了。";
+			break;
+			case 6:
+			x="今天是星期六，睡觉去吧。";
+			break;
+		}
+		document.write(x);
+	</script>
+</html>

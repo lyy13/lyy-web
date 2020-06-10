@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" name="" value="设置" id="but">
+	<select name="" id="sel">
+		<option value="1">北京</option>
+		<option value="2">广州</option>
+		<option value="3">上海</option>
+		<option value="4">青岛</option>
+		<option value="5">海南</option>
+	</select>
+	<script type="text/javascript">
+		var btn = document.getElementById('but');
+		btn.onclick=function () {
+			var sel=document.getElementById('sel');
+			var opt=sel.getElementsByTagName('option')
+			// 随机生成索引
+			// math.random()->[0,1)
+			// math.random()*5->[0,5)
+			var randomIndex=parseInt(Math.random()*opt.length);
+			var option = opt[randomIndex];
+			option.selected=true;
+
+		}
+	</script>
+</body>
+</html>

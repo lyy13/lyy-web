@@ -1,0 +1,21 @@
+移动端适应大小
+<meta name="viewport" content="width=device-width">
+device-width，device-height就是ideal viewport的宽高
+
+initial-scale=1也可以得到相同效果，为了解决兼容性，两个都要写
+<meta name="viewport" content="width=device-width，initial-scale=1">
+
+
+ES6声明变量
+let和const
+
+let声明的变量不存在预解析，在同一个作用域内不允许重复；块内部定义的变量在外部也不能访问
+
+
+const是声明常量的，必须初始化而且不允许重新赋值
+
+
+web开发框架，express
+
+
+                                  

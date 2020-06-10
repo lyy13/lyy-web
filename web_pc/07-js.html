@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	* {
+        width: 1000px;
+        margin: 0 auto;
+	}
+	#biaoti,#zuozhe,#date {
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+	// 插入循环
+    var obj={ biaoti:'<h1 id="biaoti"> 标题 </h1>', 
+              zuozhe:'<h3 id="zuozhe"> 作者：lyy</h3>',
+              date:'<p id="date">2019-07-09</p>',
+              zhengwen:'<p id="zhengwen"> &nbsp&nbsp&nbsp&nbsp&nbsp发是氪金活动范围欧合肥市吉峰农机回复的说法附件三开发技术客户富士康是哈哈to我瓦尔加快递费腹肌啊开发的开始放假阿里奥克斯的飞机客户V型触摸寻额若无而为深刻的房间奥斯卡分腹肌啊抗衰老的恢复数据库的恢复六块腹肌法很谨慎的回复福建安徽飞机奥斯卡分爱空间混分巨兽的回放回房间安可的恢复上课激发客户的富士康绝代风华接发哈开始的恢复快睡啦东方红</p>'
+          };
+	var attr='';
+	for(attr in obj){
+		// document.getElementById('obj[attr]').innerHTML='标题';
+		document.write(obj[attr]+'<br/>');
+	}
+
+   // 打印星星
+	for (var i = 1; i < 10; i++) {
+		for (var j = 1; j <= i; j++) {		
+			document.write('☆');
+		}
+		document.write('<br/>');
+	}
+
+    document.write('<br/>');
+
+	// 九九乘法表
+	var a=1,b;
+	document.write('<table border="1">');
+	while(a<10){
+		document.write('<tr>');
+		b=1;
+        while(b<=a){
+        	document.write('<td>');
+        	var sum=a*b;
+            document.write(a+'*'+b+'='+sum);
+            document.write('</td>');
+            b++;
+        }
+        a++;
+        document.write('</tr>');
+	}
+
+	
+	
+</script>
+</html>

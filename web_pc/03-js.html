@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+        window.onload=function(){
+        var oTxt1=document.getElementById("txt1");
+        var oTxt2=document.getElementById("txt2");
+        var oTxt3=document.getElementById("txt3");
+        var oBtn=document.getElementById("btn");
+        oBtn.onclick=function () {
+        //parseFloat:123ss 获取前面的数字，ss去除
+        var sum=(parseFloat(oTxt1.value)+parseFloat(oTxt2.value));
+        // isNaN函数：不是一个数字
+        if(isNaN(sum)){
+              alert("你输入的不是数字");
+        }else {
+              oTxt3.value=sum;
+          }
+       }
+
+       var x=1.7976931348623157E+10308;  //计数法：表示1.7976931348623157乘以10的308次方
+       document.write(x + "<br>");         // Infinity
+       var y=-1.7976931348623157E+10308; 
+       document.write(y);  
+
+
+       // 字符串类型
+       var a = "abcde";
+       var b = "你好";
+       var c = "123123";
+       var d = "哈哈哈哈哈";
+       var e = "";  
+       var f = "哈哈哈"; 
+       console.log(typeof a);
+       console.log(typeof b);
+       console.log(typeof c);
+       console.log(typeof d);
+       console.log(typeof e);
+
+
+
+       // parseInt()：转成整数
+       // parseFloat()：转成浮点数
+       // eval()函数：字符串转成表达式并返回结果
+       var a="1+2";
+       alert(eval(a));
+
+
+
+    }
+
+	</script>
+</head>
+<body>
+	<input type="text" id="txt1">+<input type="text" id="txt2">=
+<input type="text" id="txt3">
+<button type="button" id="btn">求和</button>
+</body>
+</html>

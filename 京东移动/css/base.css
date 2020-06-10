@@ -1,0 +1,57 @@
+/*公共样式*/
+
+html,body,ul,li,img,a,p,form,input,div {
+	padding: 0;
+	margin: 0;
+	/*设置盒模型*/
+	box-sizing: border-box;
+	/*去除移动端特有的点击高亮*/
+	-webkit-tap-highlight-color: transparent;
+}
+body {
+	font-family: "微软雅黑"，sans-serif;
+	font-size: 13px;
+}
+a,a:hover {
+	text-decoration: none;
+	color: #666;
+}
+ul {
+	list-style: none;
+}
+input {
+	/*清楚边框获取焦点时默认效果*/
+	outline: none;
+	border: none;
+	border: 1px solid #ccc;
+}
+
+/*添加新样式*/
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.m-left10 {
+	margin-left: 10px;
+}
+.m-right10 {
+	margin-right: 10px;
+}
+.m-top10 {
+	margin-top: 10px;
+}
+.m-bottom10 {
+	margin-bottom: 10px;
+}
+/*清楚浮动*/
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: block;
+	height: 0;
+	line-height: 0px;
+	clear: both;
+	visibility: hidden;
+}

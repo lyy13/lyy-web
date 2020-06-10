@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	#game {
+		width: 800px;
+		height: 500px;
+		background: url('sky.png');
+		position: relative;
+		overflow: hidden;
+	}
+	#bird {
+		width: 34px;
+		height: 25px;
+		background: url('bird.png') 0px -5px no-repeat;
+		position: absolute;
+		top: 100px;
+		left: 100px;
+
+	}
+</style>
+</head>
+<body>
+	<div id="game">
+		<div id="bird"></div>
+	</div>
+	<script type="text/javascript">
+		// 让小鸟飞起来
+		// 移动的背景
+		// top
+		// 定时器
+		// 动画原理leader=leader+step
+		// 获取相应的元素
+		var game=document.getElementById('game');
+		var bird1=document.getElementById('bird');
+		// 获取初始化背景的值
+		var sky={
+			x:0
+		}
+		// 初始化小鸟的值
+		var bird={
+			speedX:5,
+			speedY:5,
+			x:bird1.offsetLeft,
+			y:bird1.offsetTop
+		}
+		// 游戏的状态
+		var running=true;
+		setInterval(function(){
+			 bird.speedY+=1;
+                bird.y+=bird.speedY;
+            // 移动背景让小鸟实现水平运动
+           if(running){
+           	    sky.x-=5;
+                game.style.backgroundPositionX=sky.x    +'px';
+                if(bird.y<0){
+                	running=false;
+                	bird.y=0;
+                }
+                if (bird.y+bird1.offsetHeight>500) {
+                	running=false;
+                	bird.y=500-bird1.offsetHeight;
+                }
+               
+                bird1.style.top=bird.y+'px';
+           }
+		},30)
+
+		// 点击文档的时候，实现小鸟向上运动
+		document.onclick=function(){
+			bird.speedY = -10;
+		}
+
+		// 创建管道
+		function creatpipe(position){
+           var pipe={};
+           pipe.x=position;
+           // 管道高度，在200-300间
+           pipe.theight=150+parseInt(Math.random()*100);
+           pipe.bheight=500-pipe.theight-150;
+           pipe.btop=pipe.theight+150;
+
+           
+           var tpipe=document.createElement('div');
+           tpipe.style.width='35px';
+           tpipe.style.height=pipe.theight+'px';
+           tpipe.style.background='url(pipe.png) no-repeat center bottom';
+           tpipe.style.position='absolute';
+           tpipe.style.top=0;
+           tpipe.style.left=pipe.x+'px';
+           game.appendChild(tpipe);
+
+
+           var bpipe=document.createElement('div');
+           bpipe.style.width='35px';
+           bpipe.style.height=pipe.bheight+'px';
+           bpipe.style.background='url(pipe.png) no-repeat center bottom';
+           bpipe.style.position='absolute';
+           bpipe.style.top=pipe.btop+'px';
+           bpipe.style.left=pipe.x+'px';
+           game.appendChild(bpipe);
+
+
+           // 让管道运动起来
+           setInterval(function(){
+                if(running){
+                	pipe.x -=2;
+                tpipe.style.left=pipe.x+'px';
+                bpipe.style.left=pipe.x+'px';
+                if(pipe.x<-35){
+                	pipe.x=800;
+                }
+                var tcheck=bird.x+34>pipe.x&&bird.x<pipe.x+35&&bird.y<pipe.theight;
+                var bcheck=bird.x+34>pipe.x&&bird.x<pipe.x+35&&bird.y>pipe.theight+150;
+                if(tcheck||bcheck){
+                	running=false;
+                }
+                }
+           },30)
+		}
+		creatpipe(400)
+		creatpipe(600)
+		creatpipe(800)
+		creatpipe(1000)
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 数据类型 -->
+	<script type="text/javascript">
+           var num='123';
+           // /typeof打印数据类型/ 
+           console.log(typeof num);
+
+           // 求和
+           window.onload=function() {
+           	var text1=document.getElementById('text1');
+           	var text2=document.getElementById('text2');
+           	var text3=document.getElementById('text3');
+           	var btn=document.getElementById('btn');
+           	btn.onclick=function(){
+           		text3.value=(parseFloat(text1.value))+(parseFloat(text2.value));
+           	}
+           }
+	</script>
+</head>
+<body>
+	<form action="http://www.baidu.com">
+		<input id="text1" type="text" name="">+<input id="text2" type="text" name="">=<input id="text3" type="text" name=""> <input type="button" id="btn" value="求和">
+	</form>
+</body>
+</html>

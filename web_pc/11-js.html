@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// console.log(/e/.test('ember'));
+		function checkp(){
+			var phone=document.getElementById('phone');
+			if (!(/^1[3|5][0-9]\d{4,8}$/.test(phone))) {
+				alert('不是完整的11位手机号码');
+				document.getElementById('phone').focus();
+                return false;
+			} else {
+				alert('这是正确的手机号码');
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="phone">
+	<button type="button" onclick="checkp()">电话号码</button>
+</body>
+</html>

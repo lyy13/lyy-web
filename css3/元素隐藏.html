@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+    div {
+    	height: 100px;
+    	width: 100px;
+    	background-color: green;
+        text-align: center;
+        line-height: 100px;
+        margin: 50px auto;
+        position: relative;
+    }
+    div img {
+    	position: absolute;
+    	left: 100px;
+    	top: 0;
+    	display: none;
+    }
+    div:hover img {  /*鼠标经过时，图片会显示出来*/
+    	display: block;
+    }
+</style>
+</head>
+<body>
+	<div>
+		扫描二维码
+		<img src="images/二维码.png" alt="">
+	</div>
+</body>
+</html>

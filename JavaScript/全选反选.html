@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox" id="cb"></th>
+				<th>商品</th>
+				<th>价格</th>
+			</tr>
+		</thead>
+		<tbody id="tbo">
+			<tr >
+				<td><input type="checkbox"></td>
+				<td>华为</td>
+				<td>2000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>华为</td>
+				<td>2000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>华为</td>
+				<td>2000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>华为</td>
+				<td>2000</td>
+			</tr>
+		</tbody>
+	</table>
+	<input type="button" value="反选" id="btn">
+	<script type="text/javascript">
+		var tbo = document.getElementById('tbo');
+			var inputs =tbo.getElementsByTagName('input');
+		// 全选
+		// 1.获取父CheckBox，注册点击事件
+		var cb = document.getElementById('cb');
+		cb.onclick=function () {
+			
+			for (var i = 0; i < inputs.length; i++) {
+				var input=inputs[i];
+
+				if (input.type==='checkbox') {
+					input.checked=this.checked;
+				}
+			}
+		}
+		// 如果子选项都选中，则父选项也选中
+		for (var i = 0; i < inputs.length; i++) {
+			var input=inputs[i];
+			if (input.type!=='checkbox') {
+				continue;
+			}
+			input.onclick=function(){
+			    checkall();
+		}
+
+		function checkall(){
+			var allc =true;
+				for(var i=0;i < inputs.length; i++){
+					var input=inputs[i];
+					if(input.type!=='checkbox'){
+						continue;
+					}
+					if(!input.checked){
+						allc=false;
+					}
+				}
+				cb.checked=allc;
+			}
+		}
+		// 反选
+		var btn =document.getElementById('btn');
+		btn.onclick = function (){
+			for (var i = 0; i < inputs.length; i++) {
+			var input=inputs[i];
+			if (input.type!=='checkbox') {
+				continue;
+			}
+			input.checked=!input.checked;
+             checkall();
+		    }
+		}
+	</script>
+</body>
+</html>
